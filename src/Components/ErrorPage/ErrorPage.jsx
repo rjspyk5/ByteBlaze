@@ -1,7 +1,11 @@
 import React from "react";
-import { useRouteError } from "react-router-dom";
+import { useNavigate, useRouteError } from "react-router-dom";
 export const ErrorPage = () => {
   const error = useRouteError();
+  const navigate = useNavigate();
+  const handleBack = () => {
+    navigate(-1);
+  };
   return (
     <div>
       <h1>Oops!</h1>
@@ -9,6 +13,7 @@ export const ErrorPage = () => {
       <p>
         <i>{error.statusText || error.message}</i>
       </p>
+      <button onClick={handleBack}>Go back</button>
     </div>
   );
 };

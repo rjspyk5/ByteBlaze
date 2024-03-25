@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <div className="flex justify-between ">
       <NavLink className="font-bold text-2xl" to="/">
-        Logo
+        ByteBlaze
       </NavLink>
       <div className="space-x-6 *:font-bold">
         <NavLink
